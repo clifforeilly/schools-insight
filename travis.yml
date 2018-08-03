@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.6"
+deploy:
+  provider: lambda
+  function_name: "schools-insight-d1"
+  region: "eu-west-1"
+  role: "arn:aws:iam::470483222468:role/service-role/schools-insight-dev"
+  runtime: "python3.6"
+  handler_name: "lambda_function.lambda_handler"
